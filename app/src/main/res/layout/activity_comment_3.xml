@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -16,31 +16,34 @@
             android:layout_height="56dp"
             android:background="@color/colorPrimary"/>
 
-        <ScrollView
-            android:id="@+id/scrollView"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-            <RelativeLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hello!"/>
-            </RelativeLayout>
-        </ScrollView>
+                <FrameLayout
+                    android:id="@+id/mainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical">
 
-        <com.thefinestartist.myapplication.CustomEditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:hint="Type your text"/>
+                    <FrameLayout
+                        android:id="@+id/editView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-        <View
-            android:id="@+id/keyboardBelow"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+                        <com.thefinestartist.myapplication.CustomEditText
+                            android:id="@+id/editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Type your text"/>
+                    </FrameLayout>
+                </FrameLayout>
+            </ScrollView>
+        </FrameLayout>
     </LinearLayout>
 </FrameLayout>

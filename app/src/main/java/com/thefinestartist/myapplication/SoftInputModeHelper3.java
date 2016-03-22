@@ -43,10 +43,12 @@ public class SoftInputModeHelper3 {
             int heightDifference = usableHeightSansKeyboard - usableHeightNow;
             if (heightDifference > (usableHeightSansKeyboard / 4)) {
                 // keyboard probably just became visible
+                layoutParams.height = usableHeightSansKeyboard - heightDifference;
                 if (listener != null)
                     listener.onStateChanged(true, heightDifference);
             } else {
                 // keyboard probably just became hidden
+                layoutParams.height = usableHeightSansKeyboard;
                 if (listener != null)
                     listener.onStateChanged(false, heightDifference);
             }
