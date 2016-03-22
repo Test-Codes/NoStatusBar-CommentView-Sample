@@ -31,17 +31,11 @@
                     android:layout_height="0dp"
                     android:orientation="vertical">
 
-                    <FrameLayout
-                        android:id="@+id/editView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <com.thefinestartist.myapplication.CustomEditText
-                            android:id="@+id/editText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Type your text"/>
-                    </FrameLayout>
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Type your text"/>
                 </FrameLayout>
             </ScrollView>
         </FrameLayout>
